@@ -9,23 +9,38 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
+
+
+
+  
+
 h1 {
     color: $text-color;
 }
-#admin {
+#admin {  
+    background-color: #313131;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: -5px -5px;
     height: 100vh;
     overflow: hidden;
     display: flex;
 
     #sidebar {
-        background-color: red;
+        width: 300px;
+        background-color: #1F1D2B;
+        margin: 20px;
+        border-radius: 20px;
+
     }
 
     #wrapper {
-        background-color: green;
         flex-grow: 1;
-
-        nav{
+        background-color: #1F1D2B;
+        margin: 20px;
+        border-radius: 20px;
+        
+        header{
             min-height: 70px;
             background-color: blue;
         }
