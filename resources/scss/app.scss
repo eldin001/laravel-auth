@@ -9,14 +9,10 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
-
-
-
-  
-
-h1 {
-    color: $text-color;
+.d-b {
+    border: 1px solid red;
 }
+/* scss */
 #admin {  
     background-color: #313131;
     background-image: radial-gradient(rgba(255, 255, 255, 0.171) 2px, transparent 0);
@@ -31,7 +27,16 @@ h1 {
         background-color: #1F1D2B;
         margin: 20px;
         border-radius: 20px;
+        color: rgb(206, 206, 206);
+    }
 
+    ul {
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: rgb(206, 206, 206);
     }
 
     #wrapper {
