@@ -12,6 +12,10 @@ $fa-font-path: "../fonts/webfonts" !default;
 .d-b {
     border: 1px solid red;
 }
+
+.active {
+    color:green;
+}
 /* scss */
 #admin {  
     background-color: #313131;
@@ -22,22 +26,53 @@ $fa-font-path: "../fonts/webfonts" !default;
     overflow: hidden;
     display: flex;
 
+    .admin-icon {
+        border-radius: 20px 20px 0 0;
+        border-bottom: 1px dotted rgb(109, 0, 156);
+    }
+
+
+#sidebar {
+    width: 20%;
+    background-color: #1F1D2B;
+    margin: 20px;
+    border-radius: 20px;
+    color: rgb(206, 206, 206);
+    transition: width 0.5s ease; 
+  }
+  
+  #sidebar ul {
+    list-style: none;
+  }
+  
+  #sidebar a {
+    text-decoration: none;
+    color: rgb(206, 206, 206);
+    transition: opacity 0.5s ease; 
+  }
+  
+
+  @media (max-width: 768px) {
     #sidebar {
-        width: 300px;
-        background-color: #1F1D2B;
-        margin: 20px;
-        border-radius: 20px;
-        color: rgb(206, 206, 206);
+      width: 100px;
+    }
+  
+    #sidebar .admin-icon span {
+      display: none; 
+    }
+  
+    #sidebar ul li span {
+      display: none; 
     }
 
-    ul {
-        list-style: none;
-    }
+    .admin-icon {
 
-    a{
-        text-decoration: none;
-        color: rgb(206, 206, 206);
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
+  
+  }
 
     #wrapper {
         flex-grow: 1;
@@ -46,8 +81,10 @@ $fa-font-path: "../fonts/webfonts" !default;
         border-radius: 20px;
         
         header{
-            min-height: 70px;
-            background-color: blue;
+            height: 70px;
+            border: 1px solid red;
         }
     }
 }
+
+
