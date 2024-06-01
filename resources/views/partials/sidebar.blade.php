@@ -1,7 +1,7 @@
 <nav id="sidebar">
   <div class="admin-icon d-flex align-items-center p-3 gap-3">
     <a href="#"><i class="fa-solid fa-user-tie fa-2xl"></i></a>
-    <a href="#"><span class="fs-3">Projects Admin</span></a>
+    <a href="#"><span class="fs-3">Projects <br> Admin</span></a>
   </div>
   <ul class="d-flex flex-column gap-4 mt-3">
     <li class="{{ (Route::currentRouteName() == 'admin.dashboard' ? 'active' : '') }}">
