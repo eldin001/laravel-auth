@@ -19,7 +19,7 @@ class Project extends Model
             $slug = Str::slug($title . '_' . $count, '_');
             $count++;
         }
-        return $slug;
+        return  $slug;
     }
 
 }
