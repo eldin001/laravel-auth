@@ -28,7 +28,6 @@ $fa-font-path: "../fonts/webfonts" !default;
 
     .admin-icon {
         border-radius: 20px 20px 0 0;
-        border-bottom: 1px dotted rgb(109, 0, 156);
     }
 
 
@@ -55,7 +54,11 @@ $fa-font-path: "../fonts/webfonts" !default;
 
   @media (max-width: 868px) {
     #sidebar {
-      width: 100px;
+        padding-top: 10px;
+      width: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   
     #sidebar .admin-icon span {
@@ -66,12 +69,19 @@ $fa-font-path: "../fonts/webfonts" !default;
       display: none; 
     }
 
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+    }
+
     .admin-icon {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 2px;
+        margin-left: 10px;
     }
   
   }
@@ -82,19 +92,34 @@ $fa-font-path: "../fonts/webfonts" !default;
         margin: 20px;
         border-radius: 20px;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-        
-        header{
-            height: 70px;
-            border: 1px solid red;
-        }
+        overflow: auto;
+    }
+
+    #wrapper::-webkit-scrollbar {
+        background-color: #1F1D2B;
+        width: 16px;
+        border-radius: 100px;
+        right: 10px;
+        display: none;
     }
 }
 
+#sidebar li:hover  {
+
+    color: black;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
 
 .topnav {
     background-color: #738A90;
     overflow: hidden;
     border-radius: 15px 15px 0 0 ;
+
   }
   
 
@@ -152,5 +177,6 @@ $fa-font-path: "../fonts/webfonts" !default;
   .img-profile {
     width: 20px;
   }
+  
   
 

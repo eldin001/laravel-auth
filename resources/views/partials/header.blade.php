@@ -1,3 +1,4 @@
+<nav>
 <div class="topnav" id="myTopnav">
     <a class="nav-link" href="#" id="userProfile" role="button">
         <span class="">{{Auth::user()->name}}</span>
@@ -19,6 +20,7 @@
         <i class="fa fa-bars fa-xl"></i>
     </a>
 </div>
+</nav>
 <script>
     function myFunction() {
         var x = document.getElementById("myTopnav");
