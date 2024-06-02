@@ -21,7 +21,17 @@
       <td>{{$project->slug}}</td>
       <td>{{$project->created_at}}</td>
       <td>{{$project->updated_at}}</td>
-      <td>View-edit-delete</td>
+      <td class="final">
+        <div>
+        <i class="fa-solid fa-eye"></i>
+        </div>
+        <div>
+        <i class="fa-solid fa-pen-to-square"></i>
+        </div>
+        <div>
+ 
+        </div>
+      </td>
     </tr>
     @endforeach
   </tbody>
