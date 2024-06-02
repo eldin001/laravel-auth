@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 @section('content')
  <section>
-    <h1>Projects</h1>
- <table class="table">
+    <h1 class="projects ps-5">Projects</h1>
+ <table class="table table-dark">
   <thead>
     <tr>
       <th scope="col">ID</th>
