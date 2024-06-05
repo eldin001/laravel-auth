@@ -117,6 +117,7 @@ $fa-font-path: "../fonts/webfonts" !default;
 #sidebar li:hover {
     background-color: #1E0342;
     cursor: pointer;
+    transition: all 0.5ms;
 }
 
 nav {

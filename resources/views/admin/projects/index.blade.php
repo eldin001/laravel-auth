@@ -1,40 +1,48 @@
 @extends('layouts.admin')
+
 @section('content')
- <section>
+<section>
     <h1 class="projects ps-5">Projects</h1>
- <table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">TITLE</th>
-      <th scope="col">SLUG</th>
-      <th scope="col">CREATED AT </th>
-      <th scope="col">UPDATED AT</th>
-      <th scope="col">ACTION</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider">
-    @foreach ($projects as $project)
-    <tr>
-      <td>{{$project->id}}</td>
-      <td>{{$project->title}}</td>
-      <td>{{$project->slug}}</td>
-      <td>{{$project->created_at}}</td>
-      <td>{{$project->updated_at}}</td>
-      <td class="final">
-        <div>
-        <i class="fa-solid fa-eye"></i>
-        </div>
-        <div>
-        <i class="fa-solid fa-pen-to-square"></i>
-        </div>
-        <div>
- 
-        </div>
-      </td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
- </section>
+    <div class="mb-3 ps-5">
+    <a href="{{ route('admin.projects.create') }}" class="btn btn-primary">Crea Nuovo Progetto</a>
+    </div>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">TITLE</th>
+                <th scope="col">SLUG</th>
+                <th scope="col">CREATED AT</th>
+                <th scope="col">UPDATED AT</th>
+                <th scope="col">ACTION</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            @foreach ($projects as $project)
+            <tr>
+                <td>{{ $project->id }}</td>
+                <td>{{ $project->title }}</td>
+                <td>{{ $project->slug }}</td>
+                <td>{{ $project->created_at }}</td>
+                <td>{{ $project->updated_at }}</td>
+                <td class="final">
+                    <div>
+                        <a href="{{ route('admin.projects.show', $project->id) }}"><i class="fa-solid fa-eye"></i></a>
+                    </div>
+                    <div>
+                        <a href="{{ route('admin.projects.edit', $project->id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                    <div>
+                        <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Sei sicuro di voler cancellare questo progetto?');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" style="border:none; background:none;"><i class="fa-solid fa-trash"></i></button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</section>
 @endsection
