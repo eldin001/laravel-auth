@@ -197,11 +197,21 @@ nav {
     margin: auto;
 
     .final {
-    }
+      .view {
+        border: 1px solid rgb(5, 154, 5);
+      }
+
+      .edit {
+        border: 1px solid rgb(50, 50, 253);
+      }
+
+      .delete {
+        border: 1px solid red;
+      }
+    
 
     div {
         display: inline-block;
-        border: 1px solid red;
         height: 30px;
         width: 30px;
         display: flex;
@@ -209,7 +219,9 @@ nav {
         justify-content: center;
         align-items: center;
         margin: 10px;
+        border-radius: 5px;
     }
+  }
   }
 
   .Btn {

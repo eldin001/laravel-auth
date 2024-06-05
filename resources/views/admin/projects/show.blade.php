@@ -12,7 +12,7 @@
             <p class="card-text">Creato il: {{ $project->created_at }}</p>
             <p class="card-text">Aggiornato il: {{ $project->updated_at }}</p>
             <!-- Aggiungi altri dettagli del progetto qui -->
-            <a href="{{ route('projects.index') }}" class="btn btn-secondary">Torna indietro</a>
+            <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Torna indietro</a>
         </div>
     </div>
 </div>

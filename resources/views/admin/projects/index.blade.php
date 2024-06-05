@@ -26,17 +26,17 @@
                 <td>{{ $project->created_at }}</td>
                 <td>{{ $project->updated_at }}</td>
                 <td class="final">
-                    <div>
-                        <a href="{{ route('admin.projects.show', $project->id) }}"><i class="fa-solid fa-eye"></i></a>
+                    <div class="view">
+                        <a href="{{ route('admin.projects.show', $project->id) }}"><i class="fa-solid fa-eye" style="color: #63E6BE;"></i></i></a>
                     </div>
-                    <div>
-                        <a href="{{ route('admin.projects.edit', $project->id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <div class="edit">
+                        <a href="{{ route('admin.projects.edit', $project->id) }}"><i class="fa-solid fa-pen-to-square" style="color: #74C0FC;"></i></i></a>
                     </div>
-                    <div>
+                    <div class="delete">
                         <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Sei sicuro di voler cancellare questo progetto?');">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" style="border:none; background:none;"><i class="fa-solid fa-trash"></i></button>
+                            <button type="submit" style="border:none; background:none;"><i class="fa-solid fa-trash" style="color: #ff0000;"></i></button>
                         </form>
                     </div>
                 </td>
